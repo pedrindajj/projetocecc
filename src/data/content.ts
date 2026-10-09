@@ -16,6 +16,10 @@ import historiaQuitandeiras from "@/assets/historia-quitandeiras.jpg";
 import historiaAnguAfrica from "@/assets/historia-angu-africa.jpg";
 import historiaMilho from "@/assets/historia-milho.jpg";
 import historiaTemperos from "@/assets/historia-temperos.jpg";
+import historiaAtlantico from "@/assets/historia-atlantico.jpg";
+import historiaLei from "@/assets/historia-lei.jpg";
+import historiaAbolicao from "@/assets/historia-abolicao.jpg";
+import historiaQuerino from "@/assets/historia-querino.jpg";
 
 export type ImageInfo = { src: string; alt: string; credit: string; aiGenerated: boolean };
 export type Ingredient = { qty: number; unit: string; name: string };
@@ -297,7 +301,7 @@ export const secondaryDetails: Record<string, { ingredients: Ingredient[]; steps
 
 export const getDish = (slug: string) => dishes.find((d) => d.slug === slug);
 
-export type TimelineEvent = { year: string; title: string; text: string; region: "Atlântico" | "Índico" | "Brasil"; ref?: string };
+export type TimelineEvent = { year: string; title: string; text: string; region: "Atlântico" | "Índico" | "Brasil"; ref?: string; image?: ImageInfo };
 export const timeline: TimelineEvent[] = [
   { year: "séc. X–XV", title: "Comércio no Índico", text: "Cidades da costa somali e suaíli comerciam com a Arábia e a Índia, e especiarias como o cardamomo circulam pela região.", region: "Índico", ref: "xawaash" },
   { year: "séc. XIV–XIX", title: "Cidades-estado hauçás", text: "Kano, Katsina e Zaria florescem como centros comerciais e islâmicos no norte da atual Nigéria.", region: "Atlântico", ref: "reis" },
