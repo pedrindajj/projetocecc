@@ -10,33 +10,115 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LinhaDoTempoRouteImport } from './routes/linha-do-tempo'
+import { Route as MapaRouteImport } from './routes/mapa'
+import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as ReceitasIndexRouteImport } from './routes/receitas.index'
+import { Route as ReceitasSlugRouteImport } from './routes/receitas.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LinhaDoTempoRoute = LinhaDoTempoRouteImport.update({
+  id: '/linha-do-tempo',
+  path: '/linha-do-tempo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapaRoute = MapaRouteImport.update({
+  id: '/mapa',
+  path: '/mapa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuizRoute = QuizRouteImport.update({
+  id: '/quiz',
+  path: '/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReceitasIndexRoute = ReceitasIndexRouteImport.update({
+  id: '/receitas/',
+  path: '/receitas/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReceitasSlugRoute = ReceitasSlugRouteImport.update({
+  id: '/receitas/$slug',
+  path: '/receitas/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/linha-do-tempo': typeof LinhaDoTempoRoute
+  '/mapa': typeof MapaRoute
+  '/quiz': typeof QuizRoute
+  '/sobre': typeof SobreRoute
+  '/receitas/$slug': typeof ReceitasSlugRoute
+  '/receitas/': typeof ReceitasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/linha-do-tempo': typeof LinhaDoTempoRoute
+  '/mapa': typeof MapaRoute
+  '/quiz': typeof QuizRoute
+  '/sobre': typeof SobreRoute
+  '/receitas/$slug': typeof ReceitasSlugRoute
+  '/receitas': typeof ReceitasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/linha-do-tempo': typeof LinhaDoTempoRoute
+  '/mapa': typeof MapaRoute
+  '/quiz': typeof QuizRoute
+  '/sobre': typeof SobreRoute
+  '/receitas/$slug': typeof ReceitasSlugRoute
+  '/receitas/': typeof ReceitasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/linha-do-tempo'
+    | '/mapa'
+    | '/quiz'
+    | '/sobre'
+    | '/receitas/$slug'
+    | '/receitas/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/linha-do-tempo'
+    | '/mapa'
+    | '/quiz'
+    | '/sobre'
+    | '/receitas/$slug'
+    | '/receitas'
+  id:
+    | '__root__'
+    | '/'
+    | '/linha-do-tempo'
+    | '/mapa'
+    | '/quiz'
+    | '/sobre'
+    | '/receitas/$slug'
+    | '/receitas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LinhaDoTempoRoute: typeof LinhaDoTempoRoute
+  MapaRoute: typeof MapaRoute
+  QuizRoute: typeof QuizRoute
+  SobreRoute: typeof SobreRoute
+  ReceitasSlugRoute: typeof ReceitasSlugRoute
+  ReceitasIndexRoute: typeof ReceitasIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +130,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/linha-do-tempo': {
+      id: '/linha-do-tempo'
+      path: '/linha-do-tempo'
+      fullPath: '/linha-do-tempo'
+      preLoaderRoute: typeof LinhaDoTempoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mapa': {
+      id: '/mapa'
+      path: '/mapa'
+      fullPath: '/mapa'
+      preLoaderRoute: typeof MapaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quiz': {
+      id: '/quiz'
+      path: '/quiz'
+      fullPath: '/quiz'
+      preLoaderRoute: typeof QuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/receitas/': {
+      id: '/receitas/'
+      path: '/receitas'
+      fullPath: '/receitas/'
+      preLoaderRoute: typeof ReceitasIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/receitas/$slug': {
+      id: '/receitas/$slug'
+      path: '/receitas/$slug'
+      fullPath: '/receitas/$slug'
+      preLoaderRoute: typeof ReceitasSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LinhaDoTempoRoute: LinhaDoTempoRoute,
+  MapaRoute: MapaRoute,
+  QuizRoute: QuizRoute,
+  SobreRoute: SobreRoute,
+  ReceitasSlugRoute: ReceitasSlugRoute,
+  ReceitasIndexRoute: ReceitasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
