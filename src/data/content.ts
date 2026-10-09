@@ -213,6 +213,7 @@ export const dishes: Dish[] = [
     ] as const
   ).map(([slug, name, region, tagline, accent, refs]) => ({
     slug: slug.toLowerCase(),
+    origin: ({ acaraje: { pos: [-12.97, -38.5], place: "Salvador, Bahia" }, vatapa: { pos: [-12.97, -38.5], place: "Salvador, Bahia" }, caruru: { pos: [-12.6, -38.9], place: "Recôncavo Baiano" }, jollof: { pos: [14.7, -17.45], place: "Senegal, África Ocidental" } } as Record<string, Dish["origin"]>)[slug.toLowerCase()],
     name,
     main: false,
     region,
