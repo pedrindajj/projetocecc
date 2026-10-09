@@ -115,9 +115,9 @@ export const dishes: Dish[] = [
     intro:
       "Qumbe significa “coco” em somali. O doce é feito com coco ralado cozido em calda de açúcar perfumada com cardamomo e cortado em pedaços. Pertence à África Oriental e ao mundo do Oceano Índico, uma história diferente da travessia atlântica.",
     story: [
-      { title: "Outro oceano, outra história", kind: "contexto", refs: ["xawaash"], text: "Este prato não chegou ao Brasil pela rota atlântica. Ele vem da costa da Somália, voltada para o Oceano Índico, onde cidades portuárias como Mogadíscio e Merca trocaram mercadorias com a Arábia, a Índia e a costa suaíli por séculos." },
-      { title: "Coco e especiarias", kind: "fato", refs: ["xawaash"], text: "O coqueiro é abundante no litoral somali. O cardamomo, especiaria comum no comércio do Índico, perfuma doces, chás e o arroz somali." },
-      { title: "Um doce de festa", kind: "tradição", refs: ["xawaash"], text: "Segundo a tradição culinária somali registrada pelo Xawaash, os doces de coco são servidos com chá em visitas, festas e no Eid, celebração ao fim do Ramadã." },
+      { title: "Outro oceano, outra história", kind: "contexto", refs: ["xawaash"], image: { src: historiaIndico, alt: "Cidade portuária da costa somali com barcos de vela triangular no Oceano Índico", credit: AI_CREDIT, aiGenerated: true }, text: "Este prato não chegou ao Brasil pela rota atlântica. Ele vem da costa da Somália, voltada para o Oceano Índico, onde cidades portuárias como Mogadíscio e Merca trocaram mercadorias com a Arábia, a Índia e a costa suaíli por séculos." },
+      { title: "Coco e especiarias", kind: "fato", refs: ["xawaash"], image: { src: historiaEspeciarias, alt: "Mercado de especiarias na costa suaíli, com cardamomo, canela e coco seco", credit: AI_CREDIT, aiGenerated: true }, text: "O coqueiro é abundante no litoral somali. O cardamomo, especiaria comum no comércio do Índico, perfuma doces, chás e o arroz somali." },
+      { title: "Um doce de festa", kind: "tradição", refs: ["xawaash"], image: { src: historiaFesta, alt: "Família somali servindo chá e quadrados de qumbe em celebração", credit: AI_CREDIT, aiGenerated: true }, text: "Segundo a tradição culinária somali registrada pelo Xawaash, os doces de coco são servidos com chá em visitas, festas e no Eid, celebração ao fim do Ramadã." },
     ],
     baseServings: 12,
     ingredients: [
@@ -157,10 +157,10 @@ export const dishes: Dish[] = [
     intro:
       "Uma massa firme de fubá coberta por um ensopado de miúdos bem temperado. Prato brasileiro nascido do encontro de técnicas africanas, indígenas e portuguesas, e famoso nas ruas do Rio de Janeiro do século XIX.",
     story: [
-      { title: "Uma palavra africana", kind: "fato", refs: ["cascudo"], text: "Câmara Cascudo associa a palavra “angu” a línguas da África Ocidental e Central. No Brasil, ela passou a nomear a massa cozida de fubá ou mandioca." },
-      { title: "As vendedoras de angu", kind: "fato", refs: ["debret", "cascudo"], text: "No Rio de Janeiro do século XIX, mulheres negras, escravizadas ou libertas, vendiam angu com miúdos em grandes panelas nas ruas e praças. Debret retratou essa cena em suas pranchas." },
-      { title: "Um encontro de cozinhas", kind: "contexto", refs: ["cascudo"], text: "O milho é americano, e o costume de comer uma massa cozida acompanhada de molho lembra os pirões africanos. Os temperos refogados vêm da cozinha portuguesa." },
-      { title: "“À baiana”", kind: "tradição", refs: ["querino"], text: "O nome “à baiana” costuma indicar o uso de pimenta, coentro e, em algumas versões, dendê, temperos associados à Bahia." },
+      { title: "Uma palavra africana", kind: "fato", refs: ["cascudo"], image: { src: historiaAnguAfrica, alt: "Cozinheira africana socando massa de mandioca em pilão de madeira", credit: AI_CREDIT, aiGenerated: true }, text: "Câmara Cascudo associa a palavra “angu” a línguas da África Ocidental e Central. No Brasil, ela passou a nomear a massa cozida de fubá ou mandioca." },
+      { title: "As vendedoras de angu", kind: "fato", refs: ["debret", "cascudo"], image: { src: historiaQuitandeiras, alt: "Quitandeiras negras com panelas e tabuleiros na cabeça em praça do Rio de Janeiro do século XIX", credit: AI_CREDIT, aiGenerated: true }, text: "No Rio de Janeiro do século XIX, mulheres negras, escravizadas ou libertas, vendiam angu com miúdos em grandes panelas nas ruas e praças. Debret retratou essa cena em suas pranchas." },
+      { title: "Um encontro de cozinhas", kind: "contexto", refs: ["cascudo"], image: { src: historiaMilho, alt: "Espigas de milho, mandioca e fubá em cesto de palha", credit: AI_CREDIT, aiGenerated: true }, text: "O milho é americano, e o costume de comer uma massa cozida acompanhada de molho lembra os pirões africanos. Os temperos refogados vêm da cozinha portuguesa." },
+      { title: "“À baiana”", kind: "tradição", refs: ["querino"], image: { src: historiaTemperos, alt: "Azeite de dendê, coentro, cheiro-verde e pimentas-malagueta sobre mesa de madeira", credit: AI_CREDIT, aiGenerated: true }, text: "O nome “à baiana” costuma indicar o uso de pimenta, coentro e, em algumas versões, dendê, temperos associados à Bahia." },
     ],
     baseServings: 6,
     ingredients: [
