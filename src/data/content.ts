@@ -65,6 +65,7 @@ export const dishes: Dish[] = [
     region: "Salvador e Recôncavo, Bahia",
     tagline: "Um prato baiano cujo nome guarda a memória do povo hauçá.",
     accent: "dende",
+    origin: { pos: [-12.97, -38.5], place: "Salvador, Bahia" },
     image: { src: arrozImg, alt: "Arroz branco coberto com carne-seca desfiada e molho de camarão com dendê, em tigela de barro", credit: AI_CREDIT, aiGenerated: true },
     intro:
       "Arroz cozido bem mole, coberto com carne-seca frita e um molho de camarão seco, pimenta e azeite de dendê. Um clássico da cozinha afro-baiana, registrado por Manuel Querino no início do século XX.",
@@ -112,6 +113,7 @@ export const dishes: Dish[] = [
     region: "Somália, costa do Oceano Índico",
     tagline: "Um doce de coco e cardamomo da costa somali.",
     accent: "oceano",
+    origin: { pos: [2.05, 45.32], place: "Mogadíscio, Somália" },
     image: { src: qumbeImg, alt: "Quadrados de doce de coco somali com cardamomo em prato de latão", credit: AI_CREDIT, aiGenerated: true },
     intro:
       "Qumbe significa “coco” em somali. O doce é feito com coco ralado cozido em calda de açúcar perfumada com cardamomo e cortado em pedaços. Pertence à África Oriental e ao mundo do Oceano Índico, uma história diferente da travessia atlântica.",
@@ -154,6 +156,7 @@ export const dishes: Dish[] = [
     region: "Bahia e Rio de Janeiro, Brasil",
     tagline: "O angu das quitandeiras, com miúdos temperados.",
     accent: "milho",
+    origin: { pos: [-22.9, -43.2], place: "Rio de Janeiro" },
     image: { src: anguImg, alt: "Angu de fubá amarelo coberto com ensopado de miúdos e cheiro-verde em prato de barro", credit: AI_CREDIT, aiGenerated: true },
     intro:
       "Uma massa firme de fubá coberta por um ensopado de miúdos bem temperado. Prato brasileiro nascido do encontro de técnicas africanas, indígenas e portuguesas, e famoso nas ruas do Rio de Janeiro do século XIX.",
