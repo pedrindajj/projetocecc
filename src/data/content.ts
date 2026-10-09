@@ -305,7 +305,7 @@ export const timeline: TimelineEvent[] = [
   { year: "2004", title: "Acarajé, patrimônio", text: "O IPHAN registra o Ofício das Baianas de Acarajé como patrimônio imaterial.", region: "Brasil", ref: "iphan" },
 ];
 
-export const generalQuiz: QuizQ[] = dishes.filter((d) => d.main).flatMap((d) => d.quiz.map((q) => ({ ...q, image: d.image }))).concat([
+export const generalQuiz: QuizQ[] = dishes.filter((d) => d.main).flatMap((d) => d.quiz.map((q): QuizQ => (d.image ? { ...q, image: d.image } : q))).concat([
   { q: "Qual ingrediente aparece no Acarajé, no Vatapá e no Caruru?", options: ["Azeite de dendê", "Azeite de oliva", "Manteiga"], answer: 0, explain: "O dendê vem da palmeira africana Elaeis guineensis." },
   { q: "Em que ano o Ofício das Baianas de Acarajé virou patrimônio?", options: ["1988", "2004", "2015"], answer: 1, explain: "Ele foi registrado pelo IPHAN em 2004." },
 ]);
