@@ -1,12 +1,27 @@
 import arrozImg from "@/assets/arroz-hauca.jpg";
 import qumbeImg from "@/assets/qumbe.jpg";
 import anguImg from "@/assets/angu.jpg";
+import acarajeImg from "@/assets/acaraje.jpg";
+import vatapaImg from "@/assets/vatapa.jpg";
+import caruruImg from "@/assets/caruru.jpg";
+import jollofImg from "@/assets/jollof.jpg";
+import historiaSalvador from "@/assets/historia-salvador.jpg";
+import historiaHausa from "@/assets/historia-hausa.jpg";
+import historiaMales from "@/assets/historia-males.jpg";
+import historiaHoje from "@/assets/historia-hoje.jpg";
+import historiaIndico from "@/assets/historia-indico.jpg";
+import historiaEspeciarias from "@/assets/historia-especiarias.jpg";
+import historiaFesta from "@/assets/historia-festa.jpg";
+import historiaQuitandeiras from "@/assets/historia-quitandeiras.jpg";
+import historiaAnguAfrica from "@/assets/historia-angu-africa.jpg";
+import historiaMilho from "@/assets/historia-milho.jpg";
+import historiaTemperos from "@/assets/historia-temperos.jpg";
 
 export type ImageInfo = { src: string; alt: string; credit: string; aiGenerated: boolean };
 export type Ingredient = { qty: number; unit: string; name: string };
 export type Step = { text: string; minutes?: number };
-export type StorySection = { title: string; text: string; kind: "fato" | "tradição" | "contexto"; refs: string[] };
-export type QuizQ = { q: string; options: string[]; answer: number; explain: string };
+export type StorySection = { title: string; text: string; kind: "fato" | "tradição" | "contexto"; refs: string[]; image?: ImageInfo };
+export type QuizQ = { q: string; options: string[]; answer: number; explain: string; image?: ImageInfo };
 
 export type Dish = {
   slug: string;
@@ -53,10 +68,10 @@ export const dishes: Dish[] = [
     intro:
       "Arroz cozido bem mole, coberto com carne-seca frita e um molho de camarão seco, pimenta e azeite de dendê. Um clássico da cozinha afro-baiana, registrado por Manuel Querino no início do século XX.",
     story: [
-      { title: "Um nome que é memória", kind: "fato", refs: ["querino"], text: "Manuel Querino, primeiro grande estudioso da culinária baiana, já listava o arroz de hauçá entre os pratos de origem africana preparados em Salvador. O nome faz referência aos hauçás, povo do norte da atual Nigéria e do Níger." },
-      { title: "Os hauçás na Bahia", kind: "fato", refs: ["reis", "ufba"], text: "No século XIX, muitos africanos escravizados levados à Bahia eram hauçás, em sua maioria muçulmanos e frequentemente alfabetizados em árabe. Eles formaram uma comunidade marcante em Salvador." },
-      { title: "Contexto: a Revolta dos Malês (1835)", kind: "contexto", refs: ["reis"], text: "Em janeiro de 1835, africanos muçulmanos, sobretudo nagôs e também hauçás, organizaram em Salvador uma das maiores revoltas urbanas de escravizados das Américas. Atenção: não há documentação que ligue diretamente a revolta ao prato. Ela aparece aqui apenas como contexto da presença hauçá na cidade." },
-      { title: "Hoje", kind: "tradição", refs: ["lody"], text: "O prato é preparado em casas baianas e restaurantes de comida típica. Cada família tem sua versão: com mais ou menos leite de coco, com ou sem camarão fresco." },
+      { title: "Um nome que é memória", kind: "fato", refs: ["querino"], image: { src: historiaSalvador, alt: "Rua de Salvador no século XIX, com casario colonial e moradores", credit: AI_CREDIT, aiGenerated: true }, text: "Manuel Querino, primeiro grande estudioso da culinária baiana, já listava o arroz de hauçá entre os pratos de origem africana preparados em Salvador. O nome faz referência aos hauçás, povo do norte da atual Nigéria e do Níger." },
+      { title: "Os hauçás na Bahia", kind: "fato", refs: ["reis", "ufba"], image: { src: historiaHausa, alt: "Cidade hauçá de arquitetura de barro no norte da Nigéria, com mercado", credit: AI_CREDIT, aiGenerated: true }, text: "No século XIX, muitos africanos escravizados levados à Bahia eram hauçás, em sua maioria muçulmanos e frequentemente alfabetizados em árabe. Eles formaram uma comunidade marcante em Salvador." },
+      { title: "Contexto: a Revolta dos Malês (1835)", kind: "contexto", refs: ["reis"], image: { src: historiaMales, alt: "Rua colonial de Salvador à noite, iluminada por lampiões, em 1835", credit: AI_CREDIT, aiGenerated: true }, text: "Em janeiro de 1835, africanos muçulmanos, sobretudo nagôs e também hauçás, organizaram em Salvador uma das maiores revoltas urbanas de escravizados das Américas. Atenção: não há documentação que ligue diretamente a revolta ao prato. Ela aparece aqui apenas como contexto da presença hauçá na cidade." },
+      { title: "Hoje", kind: "tradição", refs: ["lody"], image: { src: historiaHoje, alt: "Família baiana servindo arroz de hauçá em panelas de barro", credit: AI_CREDIT, aiGenerated: true }, text: "O prato é preparado em casas baianas e restaurantes de comida típica. Cada família tem sua versão: com mais ou menos leite de coco, com ou sem camarão fresco." },
     ],
     baseServings: 4,
     ingredients: [
