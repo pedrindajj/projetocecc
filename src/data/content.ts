@@ -201,7 +201,7 @@ export const dishes: Dish[] = [
       caruru: { src: caruruImg, alt: "Caruru de quiabo com camarão seco em panela de barro", credit: AI_CREDIT, aiGenerated: true },
       jollof: { src: jollofImg, alt: "Arroz jollof avermelhado com fatias de banana-da-terra frita", credit: AI_CREDIT, aiGenerated: true },
     };
-    return (
+    return ([
       ["acaraje", "Acarajé", "Salvador, Bahia", "Bolinho de feijão-fradinho frito no dendê, patrimônio imaterial do Brasil.", "dende", ["iphan", "costalima"]],
       ["vataPa", "Vatapá", "Bahia", "Creme de pão, camarão seco, amendoim, castanha e leite de coco.", "ocre", ["querino"]],
       ["caruru", "Caruru", "Recôncavo Baiano", "Quiabo cortado miúdo com camarão seco e dendê, comida de festa.", "folha", ["lody"]],
@@ -214,6 +214,7 @@ export const dishes: Dish[] = [
     region,
     tagline,
     accent,
+    image: secondaryImages[slug.toLowerCase()],
     intro: tagline,
     story: [],
     baseServings: 4,
@@ -222,7 +223,8 @@ export const dishes: Dish[] = [
     facts: [],
     quiz: [],
     refs: [...refs],
-  } as Dish)),
+  } as Dish));
+  })(),
 ];
 
 export const secondaryDetails: Record<string, { ingredients: Ingredient[]; steps: Step[]; note: string }> = {
