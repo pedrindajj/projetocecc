@@ -121,3 +121,10 @@
 
 .leaflet-container { background: var(--background); font-family: var(--font-sans); }
 .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--card); color: var(--card-foreground); border-radius: 2px; }
+
+@media print {
+  body:has(#certificado) * { visibility: hidden; }
+  body:has(#certificado) #certificado, body:has(#certificado) #certificado * { visibility: visible; }
+  body:has(#certificado) #certificado { position: absolute; inset: 0; margin: 0; }
+  .no-print { display: none !important; }
+}

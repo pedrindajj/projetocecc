@@ -8,6 +8,7 @@ const links = [
   { to: "/glossario", label: "Glossário" },
   { to: "/linha-do-tempo", label: "Linha do tempo" },
   { to: "/quiz", label: "Quiz" },
+  { to: "/pedagogico", label: "Professores" },
   { to: "/sobre", label: "Sobre" },
 ] as const;
 

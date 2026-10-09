@@ -1,7 +1,6 @@
 # Roadmap
 
-- [x] Remove "Imagem gerada por IA" labels (credits kept on /sobre)
-- [x] Add images to each "Marcos de uma história" chapter
-- [x] Add images to the Quiz
-- [x] Add small thumbnails to "Outros sabores" cards
-- [x] Suggest additional site improvement ideas to the user
+- [x] Image refinements, glossary, mini maps
+- [x] Certificado do Quiz (8+ acertos)
+- [x] Espaço Pedagógico /pedagogico
+- [ ] Comparador cultural, ficha imprimível, guia cozinhando em casa, leitura em voz alta (próximas etapas)
