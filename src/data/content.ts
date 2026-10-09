@@ -250,7 +250,7 @@ export const secondaryDetails: Record<string, { ingredients: Ingredient[]; steps
     ],
   },
   jollof: {
-    note: "Disputado com orgulho entre Gana, Nigéria e Senegal. É tradicionalmente associado aos uolofes do Senegal (thieboudienne).",
+    note: "Disputado com orgulho entre Gana, Nigéria e Senegal. Muitos pesquisadores associam sua origem ao antigo Império Jolof, no atual Senegal.",
     ingredients: [
       { qty: 2, unit: "xícaras", name: "arroz parboilizado" },
       { qty: 4, unit: "", name: "tomates" },
