@@ -1,120 +1,115 @@
-# Raízes & Sabores — Creative and Technical Plan
+# Raízes & Sabores — Revised Creative and Technical Plan
 
 A digital culinary museum about African and Afro-Brazilian food heritage. School project by Pedro Henrique and Lian da Silva, Turma 2º A, Colégio Estadual Cidade de Candeias (BA). All site content will be in Brazilian Portuguese.
 
-## 1. Creative concept: "Uma travessia pelo sabor"
+## 1. Concept: "Uma travessia pelo sabor", with many paths
 
-The site tells one story: ingredients, people and knowledge crossing the Atlântico, from West and Central Africa to the Recôncavo Baiano. Visitors move through it like rooms in a museum. Each dish is an "exhibition room" with its own chapter.
+The travessia is not one single route. It is a journey across Africa's culinary diversity and its heritage in Brazil. Each main dish has its own geography and its own story:
 
-**Visual identity**
-- Palette: earth and fire. Very dark roasted-coffee backgrounds (#1A120B), dendê orange (#C8551E), turmeric/ochre gold (#D9A441), banana-leaf green (#3F5A3A) and handmade-paper cream (#F2E8D5) for reading sections.
-- Typography: a high-contrast editorial serif for headings (Fraunces or Cormorant Garamond) with a clear humanist sans for body text (Work Sans). Small uppercase labels for "museum captions".
-- Textures: subtle paper grain, film grain on photos, and geometric patterns drawn as thin lines, inspired by Adinkra symbols and Bahian tiles (used sparingly, with cultural notes explaining what they mean).
-- Motion: slow, documentary-style. Fades, gentle parallax, text revealed line by line, images that "develop" like film. No flashy effects.
+| Dish | Region | Story focus |
+|---|---|---|
+| Arroz de Hauçá | Bahia (Salvador and the Recôncavo); the name refers to the Hausa people of West Africa | An Afro-Bahian dish: rice, carne-seca and a pepper-and-dendê sauce. It connects to the Hausa presence in Bahia in the 19th century. |
+| Qumbe | Somalia, East Africa (Indian Ocean coast) | A Somali coconut sweet (coconut, sugar, cardamom). It belongs to a coastal Swahili and Somali food culture, not to the Atlantic crossing. |
+| Angu à Baiana | Brazil (Bahia, plus a strong tradition in Rio de Janeiro) | Corn or cassava angu with a stew of offal or meat. It blends African, Indigenous and Portuguese techniques. The section covers Rio's street angu sellers (angu da quitandeira). |
+
+The homepage opens as "Três cozinhas, três caminhos" (three kitchens, three paths), not as one line across the ocean.
+
+**Visual identity (unchanged)**
+- Dark roasted-coffee background (#1A120B), dendê orange (#C8551E), ochre (#D9A441), banana-leaf green (#3F5A3A) and paper cream (#F2E8D5).
+- Each dish gets its own accent color: dendê for Arroz de Hauçá, the turquoise of the Indian Ocean (#2E7C83) for Qumbe, and corn gold for Angu.
+- Typography: Fraunces for headings and Work Sans for body text, with small uppercase museum-style captions.
+- Slow, documentary-style motion that respects the device's "reduced motion" setting.
 
 ## 2. Site structure
 
 ```text
-/                      Início (cinematic homepage)
-/receitas              Acervo de receitas (all dishes)
+/                         Início
+/receitas                 Acervo (3 main dishes + 4 secondary ones)
 /receitas/arroz-de-hauca
 /receitas/qumbe
 /receitas/angu-a-baiana
-/receitas/$slug        Secondary recipes (acarajé, vatapá, caruru, moqueca, abará, mungunzá, jollof)
-/mapa                  Mapa das Travessias (interactive map)
-/linha-do-tempo        Linha do Tempo
-/quiz                  Desafio dos Sabores
-/sobre                 Sobre o projeto, autores, fontes e créditos de imagem
+/receitas/$slug           Acarajé, Vatapá, Caruru, Jollof Rice (West Africa)
+/mapa                     Mapa
+/linha-do-tempo           Linha do Tempo
+/quiz                     Quiz
+/sobre                    Project, authors, sources and image credits
 ```
 
-Navigation: a minimal fixed top bar (logo plus 5 links) that becomes a full-screen menu on mobile. Each recipe page links to the next dish, like walking to the next room.
+## 3. Homepage
 
-## 3. Homepage, told in scenes
+1. **Abertura**: full-screen real photo, the title appearing slowly, and the subtitle "Uma travessia pela diversidade culinária africana e afro-brasileira."
+2. **Um continente, muitas cozinhas**: a short text and a stylized map of Africa that highlights the regions behind the dishes (West Africa and the Somali coast). Brazil appears next.
+3. **Três cozinhas, três caminhos**: three large cinematic chapters, one per dish, each with its own color, place and one-line story. These are the protagonists.
+4. **Ingredientes**: cards for dendê, coconut, cardamom, corn, okra and black-eyed peas, each with its documented origin.
+5. **Mais sabores**: the 4 secondary recipes, in a smaller section.
+6. **Explore**: links to the Mapa, Linha do Tempo and Quiz.
+7. **Rodapé**: authors, school, class and sources.
 
-1. **Abertura**: full-screen photo of a wood stove or dendê being poured, with slow zoom. Title "Raízes & Sabores" appears letter by letter. Subtitle: "Uma travessia pela herança culinária africana e afro-brasileira."
-2. **O Atlântico**: as you scroll, a stylized map draws a line from the African coast to Salvador, with short text about the forced crossing and the knowledge enslaved people kept alive.
-3. **Os três pratos principais**: three large cinematic panels (Arroz de Hauçá, Qumbe, Angu à Baiana), each with a photo, a one-line story and a link to its page.
-4. **Ingredientes que atravessaram o mar**: horizontal row of ingredient cards (dendê, quiabo, inhame, feijão-fradinho, pimenta, coco). Tap a card to see where it came from.
-5. **Mais sabores**: grid of the secondary recipes.
-6. **Convites**: three doors to the Mapa, Linha do Tempo and Quiz.
-7. **Rodapé**: authors, school, class, and sources.
+## 4. Recipe pages
 
-## 4. Recipe pages (template shared by all, richer for the 3 main dishes)
+These sections apply to the 3 main dishes. The secondary recipes use a shorter version.
+- Full-screen opening with the dish's name, region and accent color.
+- **História**: an essay of 3 to 5 sections with citations shown as footnotes. Each claim is marked as a documented fact or as oral tradition.
+  - Arroz de Hauçá: covers the Hausa presence in Bahia and, as separate context, the 1835 Malê Revolt. The page says clearly that no documented direct link exists between the revolt and the dish.
+  - Qumbe: covers Somali coastal cuisine, coconut, spices and the Indian Ocean trade (main source: Xawaash).
+  - Angu à Baiana: covers the angu of enslaved people and its life as street food in Salvador and Rio.
+- A small map of origin.
+- **Ingredientes** with a portion calculator (1 to 12 people) and items you can tick off.
+- **Modo de preparo** with step cards and a full-screen "modo cozinha" with timers.
+- **Você sabia?** curiosity cards, 3 quiz questions and a sources list.
 
-- **Abertura do prato**: full-screen photo, name, origin and a key quote.
-- **A história**: an editorial essay of 3 to 5 sections with archival images and captions, covering origin, the people connected to it (for example the Hausa people and the Malê Revolt of 1835 for Arroz de Hauçá) and its place in Bahia today.
-- **Mapa de origem**: a small map of where the dish comes from.
-- **Ingredientes**: a portion selector (1 to 12 people) that recalculates quantities, with checkboxes to tick off items.
-- **Modo de preparo**: step cards, a "modo cozinha" (full-screen, large text, one step at a time, with a screen-on option where supported) and timers built into the steps.
-- **Você sabia?**: curiosity cards.
-- **Mini quiz**: 3 questions about the dish.
-- **Fontes**: references for that page.
+## 5. Features
 
-A note about Qumbe: it is hard to find documented sources for this dish. Before writing its content, I need to confirm which recipe and tradition you mean (see the open questions).
+**Essential**: map, timeline, portion calculator, cooking mode and quiz.
 
-## 5. Interactive features
+**Optional (later)**: ambient sound, a completion certificate, favorites, a glossary, print-friendly recipes and extra effects.
 
-**Essential**
-- Ingredient quantity calculator
-- Step-by-step cooking mode with timers
-- Interactive cultural map
-- Historical timeline
-- Quiz with score and a final "certificate" screen
+## 6. Map (Leaflet + free CARTO dark tiles, no key)
 
-**Optional enhancements**
-- "Ambient sound" button (wood fire, market sounds) using royalty-free audio
-- Interactive spice/ingredient "pantry" explorer
-- Glossary of Yoruba, Hausa and Kimbundu words used in Bahian cooking, shown as pop-ups
-- Print-friendly recipe version
-- Light/dark reading mode
-- Favorites saved on the device
+Places: Somalia (Mogadishu and the Benadir coast), West Africa (Hausaland in northern Nigeria and Niger, plus Yoruba lands and the Bight of Benin), Salvador and the Recôncavo, and Rio de Janeiro.
 
-## 6. Map
+Three distinct visual layers, each with a legend and an on/off filter:
+- **Movimentos históricos documentados**: solid lines, used only for routes backed by sources (for example, the Bight of Benin to Bahia, based on the Slave Voyages database). Each line shows its citation when clicked.
+- **Associações culturais**: dashed lines or soft halos, such as the Hausa name in Arroz de Hauçá. They are labeled "associação", not "rota".
+- **Origens culinárias**: dish markers, using each dish's accent color.
 
-- **Leaflet + OpenStreetMap / CARTO** tiles: free, with no account or key needed. A dark map style that matches the site.
-- Markers for regions (Hausaland/Northern Nigeria, Yoruba lands, Benin, Angola/Congo, Salvador, Recôncavo), animated curved routes across the Atlantic, and filters by dish and by period.
-- Clicking a marker opens a panel with a photo, text and links to related recipes.
-- Google Maps is left optional. It needs a key and a billing account, so it is not recommended for this project.
+Somalia has no line to Brazil. Qumbe stands alone in the Indian Ocean context. No route is drawn without a source.
 
 ## 7. Images
 
-- **Real photos first**: Wikimedia Commons (free licenses, with credits), Unsplash and Pexels for food and landscapes. Public archival images: Biblioteca Nacional Digital, Arquivo Público da Bahia, and Brasiliana Fotográfica (for example, Marc Ferrez and Rugendas or Debret prints).
-- **AI fallback**: only where good real photos do not exist, such as the plated finished dishes or historical scenes. These images use one consistent style (warm documentary photography) and always show an "Imagem gerada por IA, reconstrução ilustrativa" label.
-- Every image appears in a credits list on the Sobre page.
+- **Real photos first**: Wikimedia Commons, Unsplash, Pexels, Brasiliana Fotográfica and the Biblioteca Nacional Digital. Each one gets a credit and license.
+- Every dish photo is checked against its recipe (for example, Qumbe must show the coconut-and-cardamom sweet, not a generic coconut candy).
+- **AI fallback**: used only when no good real photo exists. All AI images share one look (natural light, documentary style) and follow the recipe ingredients exactly. Each one carries the visible label "Imagem gerada por IA". Historical scenes are marked "Reconstrução histórica ilustrativa (IA)".
+- All image credits are listed on /sobre.
 
-## 8. Historical accuracy
+## 8. Sources
 
-- Base the content on recognized authors and sources: Manuel Querino ("A Arte Culinária na Bahia", 1928), Câmara Cascudo ("História da Alimentação no Brasil"), Raul Lody, Vivaldo da Costa Lima, João José Reis ("Rebelião Escrava no Brasil", on the Malês), IPHAN (the Ofício das Baianas de Acarajé registry) and the Slave Voyages database for routes.
-- Clearly separate documented facts from oral tradition ("segundo a tradição...").
-- Each page lists its sources. Pedro and Lian should review the texts with a teacher.
+- Arroz de Hauçá and Bahia: Manuel Querino, "A Arte Culinária na Bahia" (1928); Raul Lody; Vivaldo da Costa Lima.
+- Hausa people and the Malê Revolt: João José Reis, "Rebelião Escrava no Brasil".
+- Qumbe: Xawaash (xawaash.com/recipes/coconut-sweets), plus references on Somali food culture.
+- Angu: Câmara Cascudo, "História da Alimentação no Brasil", and Debret's prints of the quitandeiras of Rio.
+- Routes: SlaveVoyages.org.
+- Citations appear on each page and again on /sobre. A teacher review is recommended.
 
 ## 9. Responsive design and performance
 
-- Mobile first, since most students and teachers will use phones. Effects get lighter on small screens and are turned off when "reduced motion" is enabled on the device.
-- Compressed, lazily loaded images. The map loads only when it appears on screen.
-- Accessibility: good contrast, text descriptions for every image, keyboard navigation.
+Mobile first, with compressed and lazily loaded images. The map loads only when it is reached. Accessibility: strong contrast, image descriptions and keyboard navigation.
 
-## 10. Stages and costs
+## 10. Stages and cost
 
-1. Foundation: visual identity, navigation, homepage
-2. The three main recipe pages, with the calculator and cooking mode
+1. Visual identity, navigation and homepage
+2. The 3 main recipe pages, with the calculator and cooking mode
 3. Map and timeline
-4. Quiz, secondary recipes, Sobre/credits
-5. Polish: animations, sound (optional), accessibility review
+4. Quiz, 4 secondary recipes and /sobre
+5. Polish and optional extras
 
-**Costs**: R$ 0 in services. The map, photo sources and libraries are free. The only costs are the Lovable credits used to build. No database or login is needed, because everything (quiz score, favorites) is stored on the visitor's device.
+Cost: R$ 0 in services. Everything is free and needs no login or database. The only cost is Lovable build credits.
 
 **Limitations**
-- Real photos of Qumbe and Arroz de Hauçá are scarce, so AI images will likely be needed.
-- Archival images vary in quality and license.
-- I cannot fact-check every historical claim, so a human review is recommended.
-
-## Open questions before building
-- Qumbe: what is the recipe or source you are using? (Ingredients, origin)
-- Do you have your own photos (for example, the dishes cooked by you) to include?
+- Real photos of Qumbe and Arroz de Hauçá are scarce, so AI images will likely be needed (always labeled).
+- Sources on Arroz de Hauçá's exact origin are limited, and the text will say so.
 
 ## Technical details
-- TanStack Start routes, one file per page. Recipe data lives in typed local files (no backend).
-- Libraries: framer-motion (animations), Lenis (smooth scrolling), react-leaflet loaded only in the browser, and shadcn components.
-- Images: real photos are added as hosted assets with credit metadata. AI images are made with the image generator and include an `aiGenerated` flag that shows the label.
-- localStorage is used for quiz scores and favorites.
+- TanStack Start with one route file per page. Dish data, citations and map layers live in typed local files; each image carries `source`, `license` and `aiGenerated` fields.
+- framer-motion for animation, react-leaflet loaded only in the browser, and shadcn components.
+- localStorage is used only for quiz progress.
