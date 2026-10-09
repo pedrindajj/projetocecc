@@ -1,5 +1,8 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, ClientOnly, Link, notFound } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
 import { dishes, getDish, secondaryDetails, sources } from "@/data/content";
+
+const DishMiniMap = lazy(() => import("@/components/DishMiniMap"));
 import { Figure, Reveal, accentBg, accentText } from "@/components/site";
 import { Ingredients, Steps } from "@/components/RecipeTools";
 import { QuizBlock } from "@/components/QuizBlock";
@@ -57,6 +60,25 @@ function DishPage() {
         <p className="font-display text-2xl leading-relaxed md:text-3xl">{d.intro}</p>
         {extra && <p className="mt-6 text-muted-foreground">{extra.note}</p>}
       </section>
+
+      {d.origin && (
+        <section className="mx-auto max-w-5xl px-6 pb-24">
+          <Reveal>
+            <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <p className={`eyebrow ${accentText[d.accent]}`}>De onde vem</p>
+                <h2 className="mt-3 text-3xl md:text-4xl">{d.origin.place}</h2>
+              </div>
+              <Link to="/mapa" className="eyebrow text-muted-foreground underline-offset-4 hover:text-accent hover:underline">Ver no mapa completo →</Link>
+            </div>
+            <ClientOnly fallback={<div className="aspect-[2/1] w-full animate-pulse bg-card md:aspect-[21/9]" />}>
+              <Suspense fallback={<div className="aspect-[2/1] w-full animate-pulse bg-card md:aspect-[21/9]" />}>
+                <DishMiniMap pos={d.origin.pos} place={d.origin.place} color={`--${d.accent === "ocre" ? "ocre" : d.accent}`} />
+              </Suspense>
+            </ClientOnly>
+          </Reveal>
+        </section>
+      )}
 
       {d.story.length > 0 && (
         <section className="mx-auto max-w-3xl space-y-20 px-6 pb-24">

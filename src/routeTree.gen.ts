@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as GlossarioRouteImport } from './routes/glossario'
 import { Route as LinhaDoTempoRouteImport } from './routes/linha-do-tempo'
 import { Route as MapaRouteImport } from './routes/mapa'
 import { Route as QuizRouteImport } from './routes/quiz'
@@ -20,6 +21,11 @@ import { Route as ReceitasSlugRouteImport } from './routes/receitas.$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GlossarioRoute = GlossarioRouteImport.update({
+  id: '/glossario',
+  path: '/glossario',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LinhaDoTempoRoute = LinhaDoTempoRouteImport.update({
@@ -55,6 +61,7 @@ const ReceitasSlugRoute = ReceitasSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/glossario': typeof GlossarioRoute
   '/linha-do-tempo': typeof LinhaDoTempoRoute
   '/mapa': typeof MapaRoute
   '/quiz': typeof QuizRoute
@@ -64,6 +71,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/glossario': typeof GlossarioRoute
   '/linha-do-tempo': typeof LinhaDoTempoRoute
   '/mapa': typeof MapaRoute
   '/quiz': typeof QuizRoute
@@ -74,6 +82,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/glossario': typeof GlossarioRoute
   '/linha-do-tempo': typeof LinhaDoTempoRoute
   '/mapa': typeof MapaRoute
   '/quiz': typeof QuizRoute
@@ -85,6 +94,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/glossario'
     | '/linha-do-tempo'
     | '/mapa'
     | '/quiz'
@@ -94,6 +104,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/glossario'
     | '/linha-do-tempo'
     | '/mapa'
     | '/quiz'
@@ -103,6 +114,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/glossario'
     | '/linha-do-tempo'
     | '/mapa'
     | '/quiz'
@@ -113,6 +125,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GlossarioRoute: typeof GlossarioRoute
   LinhaDoTempoRoute: typeof LinhaDoTempoRoute
   MapaRoute: typeof MapaRoute
   QuizRoute: typeof QuizRoute
@@ -128,6 +141,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/glossario': {
+      id: '/glossario'
+      path: '/glossario'
+      fullPath: '/glossario'
+      preLoaderRoute: typeof GlossarioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/linha-do-tempo': {
@@ -177,6 +197,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GlossarioRoute: GlossarioRoute,
   LinhaDoTempoRoute: LinhaDoTempoRoute,
   MapaRoute: MapaRoute,
   QuizRoute: QuizRoute,
