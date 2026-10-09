@@ -194,8 +194,14 @@ export const dishes: Dish[] = [
     ],
     refs: ["cascudo", "debret", "querino"],
   },
-  ...(
-    [
+  ...(function () {
+    const secondaryImages: Record<string, ImageInfo> = {
+      acaraje: { src: acarajeImg, alt: "Acarajés dourados abertos com vatapá e camarão, em folha de bananeira", credit: AI_CREDIT, aiGenerated: true },
+      vatapa: { src: vatapaImg, alt: "Vatapá cremoso em tigela de barro com fio de dendê", credit: AI_CREDIT, aiGenerated: true },
+      caruru: { src: caruruImg, alt: "Caruru de quiabo com camarão seco em panela de barro", credit: AI_CREDIT, aiGenerated: true },
+      jollof: { src: jollofImg, alt: "Arroz jollof avermelhado com fatias de banana-da-terra frita", credit: AI_CREDIT, aiGenerated: true },
+    };
+    return (
       ["acaraje", "Acarajé", "Salvador, Bahia", "Bolinho de feijão-fradinho frito no dendê, patrimônio imaterial do Brasil.", "dende", ["iphan", "costalima"]],
       ["vataPa", "Vatapá", "Bahia", "Creme de pão, camarão seco, amendoim, castanha e leite de coco.", "ocre", ["querino"]],
       ["caruru", "Caruru", "Recôncavo Baiano", "Quiabo cortado miúdo com camarão seco e dendê, comida de festa.", "folha", ["lody"]],
