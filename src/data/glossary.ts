@@ -1,6 +1,6 @@
 import { dishes, type ImageInfo } from "./content";
 
-export type GlossEntry = { term: string; def: string; refs: string[]; image?: ImageInfo };
+export type GlossEntry = { term: string; def: string; refs: string[]; image?: ImageInfo | undefined };
 
 const img = (slug: string) => dishes.find((d) => d.slug === slug)?.image;
 const storyImg = (slug: string, i: number) => dishes.find((d) => d.slug === slug)?.story[i]?.image;
