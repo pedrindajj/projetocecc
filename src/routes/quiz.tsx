@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { generalQuiz } from "@/data/content";
 import { QuizBlock } from "@/components/QuizBlock";
+import { Certificate } from "@/components/Certificate";
 
 export const Route = createFileRoute("/quiz")({
   head: () => ({
@@ -26,7 +27,7 @@ function Quiz() {
       <div className="mt-10">
         <QuizBlock questions={generalQuiz} onFinish={(s) => {
           if (best === null || s > best) { localStorage.setItem("rs-quiz-best", String(s)); setBest(s); }
-        }} />
+        }} renderResult={(s) => <Certificate score={s} total={generalQuiz.length} />} />
       </div>
     </div>
   );

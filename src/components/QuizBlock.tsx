@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import type { QuizQ } from "@/data/content";
 
-export function QuizBlock({ questions, onFinish }: { questions: QuizQ[]; onFinish?: (score: number) => void }) {
+export function QuizBlock({ questions, onFinish, renderResult }: { questions: QuizQ[]; onFinish?: (score: number) => void; renderResult?: (score: number) => ReactNode }) {
   const [i, setI] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [score, setScore] = useState(0);
@@ -18,6 +18,7 @@ export function QuizBlock({ questions, onFinish }: { questions: QuizQ[]; onFinis
         <button className="mt-8 border border-border px-6 py-3 eyebrow hover:bg-secondary" onClick={() => { setI(0); setScore(0); setPicked(null); }}>
           Recomeçar
         </button>
+        {renderResult?.(score)}
       </div>
     );
   }
