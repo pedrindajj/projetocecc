@@ -21,7 +21,7 @@ const associations = [
 
 const movements = [
   { path: [[6.3, 2.4], [-2, -15], [-12.97, -38.5]] as [number, number][], name: "Golfo do Benin → Bahia", text: "Rota documentada do tráfico atlântico de africanos escravizados (séculos XVII a XIX).", ref: "slavevoyages" },
-  { path: [[2.05, 45.32], [12, 52], [15.5, 42.5]] as [number, number][], name: "Costa somali ↔ Arábia", text: "Rotas de comércio no Oceano Índico por onde circulavam especiarias.", ref: "xawaash" },
+  { path: [[2.05, 45.32], [8, 50.5], [12.2, 51.5], [12.8, 45.0]] as [number, number][], name: "Costa somali ↔ Golfo de Áden", text: "Rotas de comércio no Oceano Índico por onde circulavam especiarias.", ref: "xawaash" },
 ];
 
 export default function CulturalMap() {
