@@ -31,7 +31,7 @@ function Sobre() {
         {dishes.filter((d) => d.image).map((d) => (
           <li key={d.slug}><strong className="text-foreground">{d.name}:</strong> {d.image!.credit}</li>
         ))}
-        <li><strong className="text-foreground">Mapa:</strong> © OpenStreetMap contributors, © CARTO.</li>
+        <li><strong className="text-foreground">Mapa:</strong> Esri (World Dark Gray Canvas), via Leaflet.</li>
       </ul>
     </div>
   );

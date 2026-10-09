@@ -35,7 +35,7 @@ export default function CulturalMap() {
   return (
     <div className="relative h-[calc(100vh-4rem)] w-full">
       <MapContainer center={[5, -5]} zoom={3} minZoom={2} scrollWheelZoom className="h-full w-full">
-        <TileLayer attribution='&copy; OpenStreetMap &copy; CARTO' url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png" />
+        <TileLayer attribution='Tiles &copy; Esri' url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}" maxZoom={16} />
         {on.movimento && movements.map((m) => (
           <Polyline key={m.name} positions={m.path} pathOptions={{ color: css("--foreground"), weight: 2.5, opacity: 0.85 }}>
             <Popup><strong>{m.name}</strong><br />{m.text}<br /><small>Fonte: {sources[m.ref]}</small></Popup>
@@ -57,7 +57,7 @@ export default function CulturalMap() {
         {legend.map((l) => (
           <label key={l.key} className="flex cursor-pointer items-center gap-3 py-1.5 text-sm">
             <input type="checkbox" checked={on[l.key]} onChange={() => toggle(l.key)} />
-            <span className={`inline-block w-6 ${l.sample}`} />
+            <span className="flex w-6 justify-center"><span className={`inline-block ${l.key === "origem" ? "" : "w-6"} ${l.sample}`} /></span>
             {l.label}
           </label>
         ))}
