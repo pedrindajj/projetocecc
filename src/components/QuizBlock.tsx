@@ -22,7 +22,7 @@ export function QuizBlock({ questions, onFinish }: { questions: QuizQ[]; onFinis
     );
   }
 
-  const q = questions[i];
+  const q = questions[i]!;
   return (
     <div>
       <p className="eyebrow text-muted-foreground">Pergunta {i + 1} de {questions.length}</p>

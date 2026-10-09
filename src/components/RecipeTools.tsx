@@ -83,8 +83,8 @@ export function Steps({ steps }: { steps: Step[] }) {
             <button className="eyebrow" onClick={() => setCooking(null)}>Sair ✕</button>
           </div>
           <div className="flex flex-1 flex-col items-center justify-center px-6 text-center">
-            <p className="max-w-3xl font-display text-3xl leading-snug md:text-5xl">{steps[cooking].text}</p>
-            {steps[cooking].minutes && <div className="mt-10 text-accent"><Timer key={cooking} minutes={steps[cooking].minutes!} /></div>}
+            <p className="max-w-3xl font-display text-3xl leading-snug md:text-5xl">{steps[cooking]?.text}</p>
+            {steps[cooking]?.minutes && <div className="mt-10 text-accent"><Timer key={cooking} minutes={steps[cooking]!.minutes!} /></div>}
           </div>
           <div className="grid grid-cols-2 border-t border-border">
             <button className="py-6 eyebrow disabled:opacity-30" disabled={cooking === 0} onClick={() => setCooking(cooking - 1)}>← Anterior</button>
