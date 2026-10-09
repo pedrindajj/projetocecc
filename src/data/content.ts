@@ -16,6 +16,10 @@ import historiaQuitandeiras from "@/assets/historia-quitandeiras.jpg";
 import historiaAnguAfrica from "@/assets/historia-angu-africa.jpg";
 import historiaMilho from "@/assets/historia-milho.jpg";
 import historiaTemperos from "@/assets/historia-temperos.jpg";
+import historiaAtlantico from "@/assets/historia-atlantico.jpg";
+import historiaLei from "@/assets/historia-lei.jpg";
+import historiaAbolicao from "@/assets/historia-abolicao.jpg";
+import historiaQuerino from "@/assets/historia-querino.jpg";
 
 export type ImageInfo = { src: string; alt: string; credit: string; aiGenerated: boolean };
 export type Ingredient = { qty: number; unit: string; name: string };
@@ -297,17 +301,17 @@ export const secondaryDetails: Record<string, { ingredients: Ingredient[]; steps
 
 export const getDish = (slug: string) => dishes.find((d) => d.slug === slug);
 
-export type TimelineEvent = { year: string; title: string; text: string; region: "Atlântico" | "Índico" | "Brasil"; ref?: string };
+export type TimelineEvent = { year: string; title: string; text: string; region: "Atlântico" | "Índico" | "Brasil"; ref?: string; image?: ImageInfo };
 export const timeline: TimelineEvent[] = [
-  { year: "séc. X–XV", title: "Comércio no Índico", text: "Cidades da costa somali e suaíli comerciam com a Arábia e a Índia, e especiarias como o cardamomo circulam pela região.", region: "Índico", ref: "xawaash" },
-  { year: "séc. XIV–XIX", title: "Cidades-estado hauçás", text: "Kano, Katsina e Zaria florescem como centros comerciais e islâmicos no norte da atual Nigéria.", region: "Atlântico", ref: "reis" },
-  { year: "1550–1850", title: "Tráfico atlântico para a Bahia", text: "Milhões de africanos são levados à força ao Brasil. O Golfo do Benin é uma das principais origens dos que chegam à Bahia.", region: "Atlântico", ref: "slavevoyages" },
-  { year: "1816–1831", title: "Debret no Rio", text: "Jean-Baptiste Debret retrata as vendedoras de angu nas ruas do Rio de Janeiro.", region: "Brasil", ref: "debret" },
-  { year: "1835", title: "Revolta dos Malês", text: "Africanos muçulmanos se rebelam em Salvador. A revolta não tem ligação documentada com o Arroz de Hauçá.", region: "Brasil", ref: "reis" },
-  { year: "1850", title: "Lei Eusébio de Queirós", text: "O tráfico atlântico de escravizados para o Brasil é proibido.", region: "Brasil" },
-  { year: "1888", title: "Abolição", text: "A Lei Áurea encerra a escravidão legal no Brasil.", region: "Brasil" },
-  { year: "1928", title: "A arte culinária na Bahia", text: "Publicação póstuma do estudo de Manuel Querino, que registra pratos como o arroz de hauçá.", region: "Brasil", ref: "querino" },
-  { year: "2004", title: "Acarajé, patrimônio", text: "O IPHAN registra o Ofício das Baianas de Acarajé como patrimônio imaterial.", region: "Brasil", ref: "iphan" },
+  { year: "séc. X–XV", title: "Comércio no Índico", text: "Cidades da costa somali e suaíli comerciam com a Arábia e a Índia, e especiarias como o cardamomo circulam pela região.", region: "Índico", ref: "xawaash", image: { src: historiaIndico, alt: "Cidade portuária da costa somali com barcos de vela triangular no Oceano Índico", credit: AI_CREDIT, aiGenerated: true } },
+  { year: "séc. XIV–XIX", title: "Cidades-estado hauçás", text: "Kano, Katsina e Zaria florescem como centros comerciais e islâmicos no norte da atual Nigéria.", region: "Atlântico", ref: "reis", image: { src: historiaHausa, alt: "Cidade hauçá de arquitetura de barro no norte da Nigéria, com mercado", credit: AI_CREDIT, aiGenerated: true } },
+  { year: "1550–1850", title: "Tráfico atlântico para a Bahia", text: "Milhões de africanos são levados à força ao Brasil. O Golfo do Benin é uma das principais origens dos que chegam à Bahia.", region: "Atlântico", ref: "slavevoyages", image: { src: historiaAtlantico, alt: "Navio de vela do século XIX ao longe no Oceano Atlântico ao entardecer", credit: AI_CREDIT, aiGenerated: true } },
+  { year: "1816–1831", title: "Debret no Rio", text: "Jean-Baptiste Debret retrata as vendedoras de angu nas ruas do Rio de Janeiro.", region: "Brasil", ref: "debret", image: { src: historiaQuitandeiras, alt: "Quitandeiras negras com panelas e tabuleiros na cabeça em praça do Rio de Janeiro do século XIX", credit: AI_CREDIT, aiGenerated: true } },
+  { year: "1835", title: "Revolta dos Malês", text: "Africanos muçulmanos se rebelam em Salvador. A revolta não tem ligação documentada com o Arroz de Hauçá.", region: "Brasil", ref: "reis", image: { src: historiaMales, alt: "Rua colonial de Salvador à noite, iluminada por lampiões, em 1835", credit: AI_CREDIT, aiGenerated: true } },
+  { year: "1850", title: "Lei Eusébio de Queirós", text: "O tráfico atlântico de escravizados para o Brasil é proibido.", region: "Brasil", image: { src: historiaLei, alt: "Documento manuscrito oficial do século XIX em papel amarelado, com selo de cera", credit: AI_CREDIT, aiGenerated: true } },
+  { year: "1888", title: "Abolição", text: "A Lei Áurea encerra a escravidão legal no Brasil.", region: "Brasil", image: { src: historiaAbolicao, alt: "Multidão em festa numa rua do Rio de Janeiro do século XIX, em registro sépia", credit: AI_CREDIT, aiGenerated: true } },
+  { year: "1928", title: "A arte culinária na Bahia", text: "Publicação póstuma do estudo de Manuel Querino, que registra pratos como o arroz de hauçá.", region: "Brasil", ref: "querino", image: { src: historiaQuerino, alt: "Livro antigo de culinária aberto sobre mesa de madeira, com páginas amareladas", credit: AI_CREDIT, aiGenerated: true } },
+  { year: "2004", title: "Acarajé, patrimônio", text: "O IPHAN registra o Ofício das Baianas de Acarajé como patrimônio imaterial.", region: "Brasil", ref: "iphan", image: { src: acarajeImg, alt: "Acarajé frito em azeite de dendê servido por baiana com tabuleiro", credit: AI_CREDIT, aiGenerated: true } },
 ];
 
 export const generalQuiz: QuizQ[] = dishes.filter((d) => d.main).flatMap((d) => d.quiz.map((q): QuizQ => (d.image ? { ...q, image: d.image } : q))).concat([
