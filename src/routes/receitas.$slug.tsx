@@ -102,7 +102,7 @@ function DishPage() {
 
       {d.quiz.length > 0 && (
         <section className="border-y border-border bg-card py-24">
-          <div className="mx-auto max-w-2xl px-6"><QuizBlock questions={d.quiz.map((q) => ({ ...q, image: d.image }))} /></div>
+          <div className="mx-auto max-w-2xl px-6"><QuizBlock questions={d.quiz.map((q) => (d.image ? { ...q, image: d.image } : q))} /></div>
         </section>
       )}
 
