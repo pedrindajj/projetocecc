@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { dishes, getDish, secondaryDetails, sources } from "@/data/content";
-import { AiBadge, Figure, Reveal, accentBg, accentText } from "@/components/site";
+import { Figure, Reveal, accentBg, accentText } from "@/components/site";
 import { Ingredients, Steps } from "@/components/RecipeTools";
 import { QuizBlock } from "@/components/QuizBlock";
 
@@ -42,7 +42,6 @@ function DishPage() {
           <>
             <Figure image={d.image} eager className="animate-slowzoom absolute inset-0" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-            {d.image.aiGenerated && <div className="absolute right-6 top-24"><AiBadge /></div>}
           </>
         ) : (
           <div className={`absolute inset-0 opacity-25 ${accentBg[d.accent]}`} />
@@ -63,6 +62,7 @@ function DishPage() {
         <section className="mx-auto max-w-3xl space-y-20 px-6 pb-24">
           {d.story.map((s, i) => (
             <Reveal key={s.title}>
+              {s.image && <Figure image={s.image} className="mb-8 aspect-[3/2]" />}
               <p className="eyebrow text-muted-foreground">{String(i + 1).padStart(2, "0")} · <span className={s.kind === "contexto" ? "text-accent" : ""}>{kindLabel[s.kind]}</span></p>
               <h2 className="mt-3 text-3xl md:text-4xl">{s.title}</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
@@ -102,7 +102,7 @@ function DishPage() {
 
       {d.quiz.length > 0 && (
         <section className="border-y border-border bg-card py-24">
-          <div className="mx-auto max-w-2xl px-6"><QuizBlock questions={d.quiz} /></div>
+          <div className="mx-auto max-w-2xl px-6"><QuizBlock questions={d.quiz.map((q) => ({ ...q, image: d.image }))} /></div>
         </section>
       )}
 
