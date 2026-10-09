@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { dishes, getDish, secondaryDetails, sources } from "@/data/content";
-import { Figure, Reveal, accentBg, accentText } from "@/components/site";
+import { AiBadge, Figure, Reveal, accentBg, accentText } from "@/components/site";
 import { Ingredients, Steps } from "@/components/RecipeTools";
 import { QuizBlock } from "@/components/QuizBlock";
 
@@ -42,6 +42,7 @@ function DishPage() {
           <>
             <Figure image={d.image} eager className="animate-slowzoom absolute inset-0" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+            {d.image.aiGenerated && <div className="absolute right-6 top-24"><AiBadge /></div>}
           </>
         ) : (
           <div className={`absolute inset-0 opacity-25 ${accentBg[d.accent]}`} />
