@@ -30,6 +30,7 @@ export type Dish = {
   region: string;
   tagline: string;
   accent: "dende" | "oceano" | "milho" | "folha" | "ocre";
+  origin?: { pos: [number, number]; place: string };
   image?: ImageInfo;
   intro: string;
   story: StorySection[];
