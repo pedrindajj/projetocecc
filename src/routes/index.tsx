@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import { dishes } from "@/data/content";
-import { AiBadge, Figure, Reveal, accentBg, accentText } from "@/components/site";
+import { Figure, Reveal, accentBg, accentText } from "@/components/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,7 +32,6 @@ function Home() {
       <section className="grain relative flex h-screen min-h-[640px] items-end overflow-hidden">
         <img src={heroImg} alt="Cozinha a lenha baiana ao entardecer, com panelas de barro e dendê" width={1920} height={1088} className="animate-slowzoom absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />
-        <div className="absolute right-6 top-24"><AiBadge /></div>
         <div className="relative mx-auto w-full max-w-7xl px-6 pb-20">
           <p className="eyebrow animate-rise text-accent">Um museu digital · Candeias, Bahia</p>
           <h1 className="animate-rise mt-6 text-6xl leading-[0.95] md:text-[9rem]" style={{ animationDelay: "200ms" }}>
@@ -98,10 +97,15 @@ function Home() {
         <p className="eyebrow text-accent">Mais sabores</p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {secondary.map((d) => (
-            <Link key={d.slug} to="/receitas/$slug" params={{ slug: d.slug }} className="group border border-border p-6 transition-colors hover:bg-card">
-              <span className={`block h-1 w-10 ${accentBg[d.accent]}`} />
-              <p className="mt-6 font-display text-2xl group-hover:text-accent">{d.name}</p>
-              <p className="mt-2 text-sm text-muted-foreground">{d.region}</p>
+            <Link key={d.slug} to="/receitas/$slug" params={{ slug: d.slug }} className="group border border-border transition-colors hover:bg-card">
+              {d.image && (
+                <img src={d.image.src} alt={d.image.alt} width={944} height={704} loading="lazy" className="aspect-[4/3] w-full object-cover" />
+              )}
+              <div className="p-6">
+                <span className={`block h-1 w-10 ${accentBg[d.accent]}`} />
+                <p className="mt-6 font-display text-2xl group-hover:text-accent">{d.name}</p>
+                <p className="mt-2 text-sm text-muted-foreground">{d.region}</p>
+              </div>
             </Link>
           ))}
         </div>

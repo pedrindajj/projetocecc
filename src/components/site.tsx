@@ -78,19 +78,10 @@ export function Reveal({ children, className = "", delay = 0 }: { children: Reac
   return <div ref={ref} className={`reveal ${className}`} style={{ transitionDelay: `${delay}ms` }}>{children}</div>;
 }
 
-export function AiBadge() {
-  return (
-    <span className="eyebrow inline-flex items-center gap-1.5 rounded-sm bg-background/80 px-2 py-1 text-[0.6rem] text-foreground backdrop-blur">
-      <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Imagem gerada por IA
-    </span>
-  );
-}
-
 export function Figure({ image, className = "", eager = false }: { image: ImageInfo; className?: string; eager?: boolean }) {
   return (
     <figure className={`${className.includes("absolute") ? "" : "relative"} overflow-hidden ${className}`}>
       <img src={image.src} alt={image.alt} loading={eager ? "eager" : "lazy"} width={1600} height={1008} className="h-full w-full object-cover" />
-      {image.aiGenerated && <div className="absolute bottom-3 left-3"><AiBadge /></div>}
     </figure>
   );
 }
