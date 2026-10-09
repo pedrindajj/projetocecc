@@ -5,6 +5,7 @@ import type { ImageInfo } from "@/data/content";
 const links = [
   { to: "/receitas", label: "Receitas" },
   { to: "/mapa", label: "Mapa" },
+  { to: "/glossario", label: "Glossário" },
   { to: "/linha-do-tempo", label: "Linha do tempo" },
   { to: "/quiz", label: "Quiz" },
   { to: "/sobre", label: "Sobre" },
