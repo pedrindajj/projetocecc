@@ -27,7 +27,7 @@ function Sobre() {
       </ul>
       <h2 className="mt-20 text-3xl">Créditos de imagem</h2>
       <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
-        <li><strong className="text-foreground">Abertura (cozinha a lenha):</strong> Imagem gerada por IA, cena ilustrativa.</li>
+        <li><strong className="text-foreground">Abertura (cozinha a lenha):</strong> Cena ilustrativa produzida para o projeto.</li>
         {dishes.filter((d) => d.image).map((d) => (
           <li key={d.slug}><strong className="text-foreground">{d.name}:</strong> {d.image!.credit}</li>
         ))}
