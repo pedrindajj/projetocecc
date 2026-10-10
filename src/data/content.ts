@@ -59,7 +59,7 @@ export const sources: Record<string, string> = {
   ufba: "VERGER, Pierre. Fluxo e refluxo do tráfico de escravos entre o Golfo do Benin e a Bahia de Todos os Santos. São Paulo: Corrupio, 1987.",
 };
 
-const AI_CREDIT = "Imagem gerada por IA para fins ilustrativos, conferida com os ingredientes da receita.";
+const AI_CREDIT = "Cena ilustrativa produzida para o projeto.";
 
 export const dishes: Dish[] = [
   {
