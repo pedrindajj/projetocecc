@@ -14,7 +14,7 @@ const links = [
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed inset-x-0 top-0 z-[1000] border-b border-border/50 bg-background/88 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-[1000] border-b border-border/50 bg-background/70 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link to="/" className="font-display text-xl tracking-tight">
           Raízes <span className="text-primary">&</span> Sabores
