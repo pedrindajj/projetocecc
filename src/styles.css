@@ -88,10 +88,6 @@
   text-transform: uppercase;
 }
 
-@utility photo-text {
-  text-shadow: 0 1px 2px oklch(0.22 0.03 50 / 0.75), 0 2px 18px oklch(0.22 0.03 50 / 0.55);
-}
-
 
 @utility grain {
   position: relative;
