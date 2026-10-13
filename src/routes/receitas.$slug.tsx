@@ -44,7 +44,7 @@ function DishPage() {
         {d.image ? (
           <>
             <Figure image={d.image} eager className="animate-slowzoom absolute inset-0" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
           </>
         ) : (
           <div className={`absolute inset-0 opacity-25 ${accentBg[d.accent]}`} />
