@@ -44,13 +44,13 @@ function DishPage() {
         {d.image ? (
           <>
             <Figure image={d.image} eager className="animate-slowzoom absolute inset-0" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-[62%] bg-gradient-to-t from-background via-background/75 to-transparent" />
           </>
         ) : (
           <div className={`absolute inset-0 opacity-25 ${accentBg[d.accent]}`} />
         )}
         <div className="relative mx-auto w-full max-w-7xl px-6 pb-16">
-          <p className={`eyebrow animate-rise ${accentText[d.accent]}`}>{d.region}</p>
+          <p className={`eyebrow animate-rise inline-block bg-background/92 px-3 py-1.5 font-medium ${accentText[d.accent]}`}>{d.region}</p>
           <h1 className="animate-rise mt-4 text-6xl md:text-9xl">{d.name}</h1>
           <p className="animate-rise mt-6 max-w-2xl text-xl text-muted-foreground">{d.tagline}</p>
         </div>
