@@ -51,7 +51,7 @@ function Timeline() {
                     <p className="font-display text-4xl text-accent">{e.year}</p>
                     <h2 className="mt-2 text-2xl">{e.title}</h2>
                     <p className="mt-3 text-muted-foreground">{e.text}</p>
-                    {e.ref && <p className="mt-3 text-xs text-muted-foreground/70">Fonte: {sources[e.ref]}</p>}
+                    {e.ref && <p className="mt-3 text-xs text-muted-foreground">Fonte: {sources[e.ref]}</p>}
                   </div>
                 </div>
               </Reveal>

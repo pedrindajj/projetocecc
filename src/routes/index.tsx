@@ -33,7 +33,7 @@ function Home() {
         <img src={heroImg} alt="Cozinha a lenha baiana ao entardecer, com panelas de barro e dendê" width={1920} height={1088} className="animate-slowzoom absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/20" />
         <div className="relative mx-auto w-full max-w-7xl px-6 pb-20">
-          <p className="eyebrow animate-rise text-accent">Um museu digital · Candeias, Bahia</p>
+          <p className="eyebrow photo-text animate-rise text-accent">Um museu digital · Candeias, Bahia</p>
           <h1 className="animate-rise mt-6 text-6xl leading-[0.95] md:text-[9rem]" style={{ animationDelay: "200ms" }}>
             Raízes <em className="text-primary">&</em><br />Sabores
           </h1>
