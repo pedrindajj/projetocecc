@@ -50,7 +50,7 @@ function DishPage() {
           <div className={`absolute inset-0 opacity-25 ${accentBg[d.accent]}`} />
         )}
         <div className="relative mx-auto w-full max-w-7xl px-6 pb-16">
-          <p className={`eyebrow animate-rise inline-block bg-background/85 px-3 py-1.5 ${accentText[d.accent]}`}>{d.region}</p>
+          <p className={`eyebrow animate-rise inline-block bg-background/85 px-3 py-1.5 font-medium ${accentText[d.accent]}`}>{d.region}</p>
           <h1 className="animate-rise mt-4 text-6xl md:text-9xl">{d.name}</h1>
           <p className="animate-rise mt-6 max-w-2xl text-xl text-muted-foreground">{d.tagline}</p>
         </div>
