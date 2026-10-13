@@ -31,7 +31,7 @@ function Home() {
     <>
       <section className="grain relative flex h-screen min-h-[640px] items-end overflow-hidden">
         <img src={heroImg} alt="Cozinha a lenha baiana ao entardecer, com panelas de barro e dendê" width={1920} height={1088} className="animate-slowzoom absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/20" />
+        <div className="absolute inset-x-0 bottom-0 h-[62%] bg-gradient-to-t from-background via-background/75 to-transparent" />
         <div className="relative mx-auto w-full max-w-7xl px-6 pb-20">
           <p className="eyebrow photo-text animate-rise text-accent">Um museu digital · Candeias, Bahia</p>
           <h1 className="animate-rise mt-6 text-6xl leading-[0.95] md:text-[9rem]" style={{ animationDelay: "200ms" }}>
