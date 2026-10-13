@@ -41,32 +41,32 @@
 
 :root {
   --radius: 0.25rem;
-  --background: oklch(0.97 0.02 85);        /* #F7F1E3 creme claro */
-  --foreground: oklch(0.3 0.035 55);        /* #2E2117 café */
-  --card: oklch(0.995 0.008 85);
-  --card-foreground: oklch(0.3 0.035 55);
-  --popover: oklch(0.995 0.008 85);
-  --popover-foreground: oklch(0.3 0.035 55);
-  --primary: oklch(0.57 0.17 45);           /* dendê */
-  --primary-foreground: oklch(0.98 0.015 85);
-  --secondary: oklch(0.93 0.03 82);
-  --secondary-foreground: oklch(0.3 0.035 55);
-  --muted: oklch(0.92 0.025 82);
-  --muted-foreground: oklch(0.5 0.035 60);
-  --accent: oklch(0.64 0.13 70);            /* ocre */
-  --accent-foreground: oklch(0.99 0.01 85);
-  --destructive: oklch(0.55 0.2 27);
+  --background: oklch(0.895 0.032 68);      /* cafezinho com leite, marrom claríssimo */
+  --foreground: oklch(0.27 0.032 52);        /* café torrado */
+  --card: oklch(0.935 0.026 72);
+  --card-foreground: oklch(0.27 0.032 52);
+  --popover: oklch(0.935 0.026 72);
+  --popover-foreground: oklch(0.27 0.032 52);
+  --primary: oklch(0.55 0.16 44);            /* dendê */
+  --primary-foreground: oklch(0.97 0.018 80);
+  --secondary: oklch(0.86 0.032 70);
+  --secondary-foreground: oklch(0.27 0.032 52);
+  --muted: oklch(0.85 0.03 68);
+  --muted-foreground: oklch(0.46 0.035 58);
+  --accent: oklch(0.6 0.12 62);              /* ocre */
+  --accent-foreground: oklch(0.98 0.012 80);
+  --destructive: oklch(0.53 0.19 27);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.3 0.035 55 / 16%);
-  --input: oklch(0.3 0.035 55 / 20%);
-  --ring: oklch(0.64 0.13 70);
-  --paper: oklch(0.995 0.008 85);
-  --paper-foreground: oklch(0.3 0.035 55);
-  --dende: oklch(0.57 0.17 45);
-  --ocre: oklch(0.64 0.13 70);
-  --folha: oklch(0.47 0.06 145);
-  --oceano: oklch(0.5 0.09 200);            /* #2E7C83 */
-  --milho: oklch(0.68 0.13 88);
+  --border: oklch(0.27 0.032 52 / 18%);
+  --input: oklch(0.27 0.032 52 / 22%);
+  --ring: oklch(0.6 0.12 62);
+  --paper: oklch(0.945 0.022 74);
+  --paper-foreground: oklch(0.27 0.032 52);
+  --dende: oklch(0.55 0.16 44);
+  --ocre: oklch(0.6 0.12 62);
+  --folha: oklch(0.44 0.06 145);
+  --oceano: oklch(0.47 0.09 200);            /* #2E7C83 */
+  --milho: oklch(0.64 0.12 85);
 }
 
 @layer base {
