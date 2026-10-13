@@ -41,32 +41,32 @@
 
 :root {
   --radius: 0.25rem;
-  --background: oklch(0.17 0.015 60);       /* #1A120B café */
-  --foreground: oklch(0.93 0.025 85);       /* creme */
-  --card: oklch(0.21 0.018 60);
-  --card-foreground: oklch(0.93 0.025 85);
-  --popover: oklch(0.21 0.018 60);
-  --popover-foreground: oklch(0.93 0.025 85);
+  --background: oklch(0.905 0.04 85);       /* areia dourada #F0DDBE */
+  --foreground: oklch(0.30 0.032 52);       /* café */
+  --card: oklch(0.95 0.02 85);
+  --card-foreground: oklch(0.30 0.032 52);
+  --popover: oklch(0.95 0.02 85);
+  --popover-foreground: oklch(0.30 0.032 52);
   --primary: oklch(0.58 0.16 45);           /* dendê */
   --primary-foreground: oklch(0.97 0.015 85);
-  --secondary: oklch(0.26 0.02 60);
-  --secondary-foreground: oklch(0.93 0.025 85);
-  --muted: oklch(0.24 0.018 60);
-  --muted-foreground: oklch(0.72 0.03 75);
-  --accent: oklch(0.74 0.13 80);            /* ocre */
-  --accent-foreground: oklch(0.17 0.015 60);
-  --destructive: oklch(0.6 0.2 27);
+  --secondary: oklch(0.86 0.035 80);
+  --secondary-foreground: oklch(0.30 0.032 52);
+  --muted: oklch(0.87 0.03 80);
+  --muted-foreground: oklch(0.47 0.03 60);
+  --accent: oklch(0.60 0.13 72);            /* ocre escurecido p/ contraste */
+  --accent-foreground: oklch(0.97 0.015 85);
+  --destructive: oklch(0.55 0.19 27);
   --destructive-foreground: oklch(0.97 0 0);
-  --border: oklch(0.93 0.025 85 / 14%);
-  --input: oklch(0.93 0.025 85 / 18%);
-  --ring: oklch(0.74 0.13 80);
-  --paper: oklch(0.93 0.03 85);             /* #F2E8D5 */
-  --paper-foreground: oklch(0.22 0.02 55);
+  --border: oklch(0.30 0.032 52 / 16%);
+  --input: oklch(0.30 0.032 52 / 20%);
+  --ring: oklch(0.60 0.13 72);
+  --paper: oklch(0.945 0.028 85);
+  --paper-foreground: oklch(0.30 0.032 52);
   --dende: oklch(0.58 0.16 45);
-  --ocre: oklch(0.74 0.13 80);
+  --ocre: oklch(0.60 0.13 72);
   --folha: oklch(0.43 0.05 140);
   --oceano: oklch(0.53 0.08 200);           /* #2E7C83 */
-  --milho: oklch(0.82 0.14 90);
+  --milho: oklch(0.60 0.13 88);
 }
 
 @layer base {
