@@ -52,7 +52,7 @@ export default function CulturalMap() {
           </CircleMarker>
         ))}
       </MapContainer>
-      <div className="absolute bottom-6 left-6 z-[500] max-w-xs border border-border bg-background/90 p-5 backdrop-blur">
+      <div className="absolute bottom-6 left-6 z-[500] max-w-xs rounded-3xl border border-border bg-background/90 p-6 shadow-soft backdrop-blur">
         <p className="eyebrow mb-3 text-accent">Legenda</p>
         {legend.map((l) => (
           <label key={l.key} className="flex cursor-pointer items-center gap-3 py-1.5 text-sm">

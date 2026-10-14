@@ -30,7 +30,7 @@ function Timeline() {
       </p>
       <div className="mt-10 flex flex-wrap gap-2">
         {regions.map((r) => (
-          <button key={r} onClick={() => setF(r)} className={`eyebrow border px-4 py-2 ${f === r ? "border-accent text-accent" : "border-border text-muted-foreground"}`}>{r}</button>
+          <button key={r} onClick={() => setF(r)} className={`eyebrow rounded-full border px-5 py-2 ${f === r ? "border-accent text-accent" : "border-border text-muted-foreground"}`}>{r}</button>
         ))}
       </div>
       <ol className="relative mt-16 border-l border-border">

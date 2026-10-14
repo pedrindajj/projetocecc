@@ -12,12 +12,12 @@ export function Certificate({ score, total }: { score: number; total: number }) 
       <label className="no-print block">
         <span className="eyebrow text-accent">Seu certificado</span>
         <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Digite seu nome completo" maxLength={60}
-          className="mt-3 w-full border border-border bg-transparent px-4 py-3 text-lg outline-none focus:border-accent" />
+          className="mt-3 w-full rounded-full border border-border bg-transparent px-6 py-3 text-lg outline-none transition-colors focus:border-accent" />
       </label>
       {name.trim() && (
         <>
-          <div id="certificado" className="mt-8 border-4 border-double border-accent bg-card p-3">
-            <div className="border border-accent/50 px-6 py-12 text-center md:px-12">
+          <div id="certificado" className="mt-8 rounded-[2rem] border-4 border-double border-accent bg-card p-3">
+            <div className="rounded-[1.4rem] border border-accent/50 px-6 py-12 text-center md:px-12">
               <p className="eyebrow text-accent">Museu Raízes & Sabores</p>
               <h2 className="mt-4 text-3xl md:text-4xl">Certificado de Honra ao Mérito</h2>
               <p className="mt-8 text-muted-foreground">Certificamos que</p>
@@ -33,7 +33,7 @@ export function Certificate({ score, total }: { score: number; total: number }) 
               <p className="mt-8 text-xs text-muted-foreground">Colégio Estadual Cidade de Candeias · Turma 2º A · Bahia</p>
             </div>
           </div>
-          <button onClick={() => window.print()} className="no-print mt-6 bg-primary px-6 py-3 eyebrow text-primary-foreground">
+          <button onClick={() => window.print()} className="no-print mt-6 rounded-full bg-primary px-7 py-3 eyebrow text-primary-foreground transition-opacity hover:opacity-90">
             Baixar / Imprimir PDF
           </button>
         </>

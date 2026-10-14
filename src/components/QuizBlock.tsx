@@ -15,7 +15,7 @@ export function QuizBlock({ questions, onFinish, renderResult }: { questions: Qu
         <p className="mt-4 text-muted-foreground">
           {score === questions.length ? "Perfeito! Você conhece bem essas histórias." : "Bom caminho. Revisite as receitas e tente de novo."}
         </p>
-        <button className="mt-8 border border-border px-6 py-3 eyebrow hover:bg-secondary" onClick={() => { setI(0); setScore(0); setPicked(null); }}>
+        <button className="mt-8 rounded-full border border-border px-7 py-3 eyebrow transition-colors hover:bg-secondary" onClick={() => { setI(0); setScore(0); setPicked(null); }}>
           Recomeçar
         </button>
         {renderResult?.(score)}
@@ -36,7 +36,7 @@ export function QuizBlock({ questions, onFinish, renderResult }: { questions: Qu
           const state = picked === null ? "" : idx === q.answer ? "border-folha bg-folha/20" : idx === picked ? "border-destructive bg-destructive/15" : "opacity-50";
           return (
             <button key={o} disabled={picked !== null} onClick={() => { setPicked(idx); if (idx === q.answer) setScore((s) => s + 1); }}
-              className={`border border-border px-5 py-4 text-left transition-colors hover:bg-secondary ${state}`}>
+              className={`rounded-2xl border border-border px-6 py-4 text-left transition-colors hover:bg-secondary ${state}`}>
               {o}
             </button>
           );
@@ -45,7 +45,7 @@ export function QuizBlock({ questions, onFinish, renderResult }: { questions: Qu
       {picked !== null && (
         <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">{q.explain}</p>
-          <button className="bg-primary px-6 py-3 eyebrow text-primary-foreground" onClick={() => {
+          <button className="rounded-full bg-primary px-7 py-3 eyebrow text-primary-foreground transition-opacity hover:opacity-90" onClick={() => {
             const next = i + 1; setPicked(null); setI(next);
             if (next >= questions.length) onFinish?.(score);
           }}>

@@ -26,7 +26,7 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <button className="eyebrow md:hidden" onClick={() => setOpen(!open)} aria-expanded={open}>
+        <button className="eyebrow rounded-full border border-border px-5 py-2 md:hidden" onClick={() => setOpen(!open)} aria-expanded={open}>
           {open ? "Fechar" : "Menu"}
         </button>
       </div>
