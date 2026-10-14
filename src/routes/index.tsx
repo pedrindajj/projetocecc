@@ -97,7 +97,7 @@ function Home() {
         <p className="eyebrow text-accent">Mais sabores</p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {secondary.map((d) => (
-            <Link key={d.slug} to="/receitas/$slug" params={{ slug: d.slug }} className="group border border-border transition-colors hover:bg-card">
+            <Link key={d.slug} to="/receitas/$slug" params={{ slug: d.slug }} className="group overflow-hidden rounded-3xl border border-border shadow-soft transition-colors hover:bg-card">
               {d.image && (
                 <img src={d.image.src} alt={d.image.alt} width={944} height={704} loading="lazy" className="aspect-[4/3] w-full object-cover" />
               )}

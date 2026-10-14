@@ -44,7 +44,7 @@ function Timeline() {
                   {e.image && (
                     <Figure
                       image={e.image}
-                      className={`aspect-[16/10] overflow-hidden rounded-sm border border-border/60 ${flip ? "md:order-2" : "md:order-1"}`}
+                      className={`aspect-[16/10] ${flip ? "md:order-2" : "md:order-1"}`}
                     />
                   )}
                   <div className={flip ? "md:order-1" : "md:order-2"}>

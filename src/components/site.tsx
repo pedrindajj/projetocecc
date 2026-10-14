@@ -81,7 +81,7 @@ export function Reveal({ children, className = "", delay = 0 }: { children: Reac
 
 export function Figure({ image, className = "", eager = false }: { image: ImageInfo; className?: string; eager?: boolean }) {
   return (
-    <figure className={`${className.includes("absolute") ? "" : "relative"} overflow-hidden ${className}`}>
+    <figure className={`${className.includes("absolute") ? "" : "relative overflow-hidden rounded-3xl shadow-soft"} ${className}`}>
       <img src={image.src} alt={image.alt} loading={eager ? "eager" : "lazy"} width={1600} height={1008} className="h-full w-full object-cover" />
     </figure>
   );
