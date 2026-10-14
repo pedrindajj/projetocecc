@@ -11,6 +11,7 @@
   --radius-md: var(--radius);
   --radius-lg: calc(var(--radius) + 2px);
   --radius-xl: calc(var(--radius) + 6px);
+  --shadow-soft: 0 20px 45px -20px oklch(0.30 0.032 52 / 0.25);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

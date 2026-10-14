@@ -27,7 +27,7 @@ export function QuizBlock({ questions, onFinish, renderResult }: { questions: Qu
   return (
     <div>
       {q.image && (
-        <img src={q.image.src} alt={q.image.alt} width={944} height={704} loading="lazy" className="mb-6 aspect-[3/2] w-full rounded-sm object-cover" />
+        <img src={q.image.src} alt={q.image.alt} width={944} height={704} loading="lazy" className="mb-6 aspect-[3/2] w-full rounded-3xl object-cover shadow-soft" />
       )}
       <p className="eyebrow text-muted-foreground">Pergunta {i + 1} de {questions.length}</p>
       <h3 className="mt-3 text-2xl md:text-3xl">{q.q}</h3>
