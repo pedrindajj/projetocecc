@@ -33,7 +33,7 @@ function Receitas() {
       <h2 className="mt-24 text-3xl">Outros sabores</h2>
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {sec.map((d) => (
-          <Link key={d.slug} to="/receitas/$slug" params={{ slug: d.slug }} className="border border-border hover:bg-card">
+          <Link key={d.slug} to="/receitas/$slug" params={{ slug: d.slug }} className="overflow-hidden rounded-3xl border border-border shadow-soft hover:bg-card">
             {d.image && (
               <img src={d.image.src} alt={d.image.alt} width={944} height={704} loading="lazy" className="aspect-[4/3] w-full object-cover" />
             )}
