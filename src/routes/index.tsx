@@ -70,7 +70,7 @@ function Home() {
               <p className={`eyebrow ${accentText[d.accent]}`}>{String(i + 1).padStart(2, "0")} · {d.region}</p>
               <h3 className="mt-4 text-5xl md:text-7xl">{d.name}</h3>
               <p className="mt-6 text-lg text-muted-foreground">{d.tagline}</p>
-              <Link to="/receitas/$slug" params={{ slug: d.slug }} className={`eyebrow mt-8 inline-block px-6 py-4 text-background ${accentBg[d.accent]}`}>
+              <Link to="/receitas/$slug" params={{ slug: d.slug }} className={`eyebrow mt-8 inline-block rounded-full px-8 py-4 text-background ${accentBg[d.accent]}`}>
                 Entrar na sala
               </Link>
             </Reveal>

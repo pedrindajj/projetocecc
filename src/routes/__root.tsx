@@ -22,7 +22,7 @@ function NotFoundComponent() {
         <h2 className="mt-4 text-xl text-foreground">Página não encontrada</h2>
         <p className="mt-2 text-sm text-muted-foreground">Este caminho não existe no nosso acervo.</p>
         <div className="mt-6">
-          <Link to="/" className="inline-flex bg-primary px-4 py-2 text-sm text-primary-foreground">Voltar ao início</Link>
+          <Link to="/" className="inline-flex rounded-full bg-primary px-6 py-2.5 text-sm text-primary-foreground">Voltar ao início</Link>
         </div>
       </div>
     </div>
@@ -41,8 +41,8 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
         <h1 className="text-xl text-foreground">Esta página não carregou</h1>
         <p className="mt-2 text-sm text-muted-foreground">Algo deu errado. Tente novamente.</p>
         <div className="mt-6 flex justify-center gap-2">
-          <button onClick={() => { router.invalidate(); reset(); }} className="bg-primary px-4 py-2 text-sm text-primary-foreground">Tentar de novo</button>
-          <a href="/" className="border border-input px-4 py-2 text-sm">Início</a>
+          <button onClick={() => { router.invalidate(); reset(); }} className="rounded-full bg-primary px-6 py-2.5 text-sm text-primary-foreground">Tentar de novo</button>
+          <a href="/" className="rounded-full border border-input px-6 py-2.5 text-sm">Início</a>
         </div>
       </div>
     </div>

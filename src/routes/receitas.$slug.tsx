@@ -50,7 +50,7 @@ function DishPage() {
           <div className={`absolute inset-0 opacity-25 ${accentBg[d.accent]}`} />
         )}
         <div className="relative mx-auto w-full max-w-7xl px-6 pb-16">
-          <p className={`eyebrow animate-rise inline-block bg-background/90 px-3 py-1.5 font-medium ${accentText[d.accent]}`}>{d.region}</p>
+          <p className={`eyebrow animate-rise inline-block rounded-full bg-background/90 px-5 py-2 font-medium ${accentText[d.accent]}`}>{d.region}</p>
           <h1 className="animate-rise mt-4 text-6xl md:text-9xl">{d.name}</h1>
           <p className="animate-rise mt-6 max-w-2xl text-xl text-muted-foreground">{d.tagline}</p>
         </div>
@@ -69,7 +69,7 @@ function DishPage() {
                 <p className={`eyebrow ${accentText[d.accent]}`}>De onde vem</p>
                 <h2 className="mt-3 text-3xl md:text-4xl">{d.origin.place}</h2>
               </div>
-              <Link to="/mapa" className="eyebrow text-muted-foreground underline-offset-4 hover:text-accent hover:underline">Ver no mapa completo →</Link>
+              <Link to="/mapa" className="eyebrow rounded-full border border-border px-5 py-2.5 text-muted-foreground transition-colors hover:border-accent hover:text-accent">Ver no mapa completo →</Link>
             </div>
             <ClientOnly fallback={<div className="aspect-[2/1] w-full animate-pulse bg-card md:aspect-[21/9]" />}>
               <Suspense fallback={<div className="aspect-[2/1] w-full animate-pulse bg-card md:aspect-[21/9]" />}>
@@ -117,7 +117,7 @@ function DishPage() {
         <section className="mx-auto max-w-7xl px-6 py-24">
           <p className="eyebrow text-accent">Você sabia?</p>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {d.facts.map((f) => <Reveal key={f} className="border-l-2 border-accent pl-6 text-lg">{f}</Reveal>)}
+            {d.facts.map((f) => <Reveal key={f} className="rounded-3xl bg-card p-7 text-lg shadow-soft">{f}</Reveal>)}
           </div>
         </section>
       )}
