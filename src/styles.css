@@ -153,7 +153,7 @@
 
 .leaflet-container { background: var(--background); font-family: var(--font-sans); }
 .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--card); color: var(--card-foreground); border-radius: 14px; }
-.leaflet-control-attribution { border-radius: 10px 0 16px 0; backdrop-filter: blur(4px); }
+.leaflet-container .leaflet-control-attribution { border-radius: 10px 0 16px 0; backdrop-filter: blur(4px); }
 
 @media print {
   body:has(#certificado) * { visibility: hidden; }
